@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "removeComments": true,
+    "module": "commonjs",
+    "outDir": "dist",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@ctrls/*": ["controllers/*"],
+      "@schemas/*": ["schemas/*"],
+      "@config/*": ["config/*"]
+    },
+    "typeRoots": ["./src/@types", "./node_modules/@types"]
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts", "typings"]
+}

@@ -1,0 +1,171 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "bookstore",
+    "contact": {}
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "securityDefinitions": {},
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/purchase": {
+      "post": {
+        "summary": "http://localhost:3000/purchase",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "http://localhost:3000/purchase",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/http%3A~1~1localhost%3A3000~1purchaserequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/": {
+      "post": {
+        "summary": "http://localhost:3000/",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "http://localhost:3000/",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/http%3A~1~1localhost%3A3000~1request"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "get": {
+        "summary": "http://localhost:3000/",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Gethttp://localhost:3000/",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "http://localhost:3000/purchaserequest": {
+      "title": "http://localhost:3000/purchaserequest",
+      "example": {
+        "bookId": "64cba756f09a9240e644cea8",
+        "user": "Nahom Brhanmeskel",
+        "price": 200
+      },
+      "type": "object",
+      "properties": {
+        "bookId": {
+          "type": "string"
+        },
+        "user": {
+          "type": "string"
+        },
+        "price": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "bookId",
+        "user",
+        "price"
+      ]
+    },
+    "http://localhost:3000/request": {
+      "title": "http://localhost:3000/request",
+      "example": {
+        "title": "Last Hope",
+        "desc": "desc",
+        "discountRate": 10,
+        "price": 200,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWyMXgN6ROv09a-iSFI6ej9v2h9xAnuFyZYAYoqXEg&s"
+      },
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "desc": {
+          "type": "string"
+        },
+        "discountRate": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "price": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "image": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "desc",
+        "discountRate",
+        "price",
+        "image"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
